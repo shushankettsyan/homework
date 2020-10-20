@@ -35,4 +35,7 @@ print("\nhouse3",house_3.set_tempriture())
 print("\nhouse4",house_4.get_tempriture())
 print("\nhouse4",house_4.set_tempriture())
 
-print(int(house_1))
+print("For house1 the difference between goal tempriture and current tempriture is",int(house_1))
+print("For house2 the difference between goal tempriture and current tempriture is",int(house_2))
+print("For house3 the difference between goal tempriture and current tempriture is",int(house_3))
+print("For house4 the difference between goal tempriture and current tempriture is",int(house_4))
