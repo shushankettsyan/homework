@@ -1,64 +1,51 @@
-# class Text:
-# 	def __init__(self,age):
-# 		self.name = input("tell something\n")
-# 		self.age = age
-#
-# 	def printing(self):
-# 		print(self.name)
-# 		print(self.age)
-#
-# my_obj = Text(18)
-# my_obj2 = Text(20)
-#
-# my_obj.printing()
-# my_obj2.printing()
-#
-#
-#
-# class Triangle:
-# 	def __init__(self):
-# 		s1 = int(input(""))
-# 		s2 = int(input(""))
-# 		s3 = int(input(""))
-#
-# 	def area(self):
+class Fruit:
+    def __init__(self, name, color, price):
+        self.name = name
+        self.color = color
+        self.price_kg = price
+        self.kg = 0
+
+    def presentation(self):
+        text = "this is {} it's color is {} and price for kg is {}".format(self.name ,self.color, self.price_kg )
+        print(text)
+
+    def set_kg(self,kg):
+        if kg > 0:
+            self.kg = kg
+        else:
+            print(F"wrong kg{self.kg}")
+
+Orange = Fruit("Orange", "orange", "500")
+pomegranate = Fruit("Nur", "red", 1000)
+print(Orange.price_kg)
+print(pomegranate.price_kg)
 
 
+Orange.presentation()
+pomegranate.presentation()
+
+#change kg
+print(pomegranate.kg)
+pomegranate.kg = 5000
+print(pomegranate.kg)
+print(Orange.kg)
 
 
-class Vehicle:
-	def __init__(self,seats):
-		self.seats = seats
+class Car:
+    def __init__(self, name, brand, color, year):
+        self.name = name
+        self.brand = brand
+        self.color = color
+        self.year = year
 
+    def presentation(self):
+        text = "this is {} it's brand is {} it's color is {} and year is {}".format(self.name ,self.brand, self.color, self.year )
+        print(text)
 
-	def print_seats(self):
-		print(self.seats)
+audi = Car("Audi Etrone", "Audi", "Grey", "2019")
+tesla = Car("Tesla road Star", "Tesla", "red", "2021")
+mercedes = Car("Mercedes SL 55 AMG", "Mercedes", "Grey", "2002")
 
-class Car(Vehicle):
-	def __init__(self, name, color, seats):
-		self.name = name
-		self.color =  color
-		Vehicle.__init__(self, seats)
-
-		self.real_seats = self.seats - 1
-
-
-bmw = Car("bmw", "red", 9)
-
-print(bmw.name, bmw.color, bmw.seats, bmw.real_seats)
-bmw.print_seats()
-print(bmw)
-print(bmw.__dict__)
-
-
-
-
-class Bicycle(Vehicle):
-	def __init__(self, color, brand, wheel, seats):
-		self.color = color
-		self.brand = brand
-		self.wheel = wheel
-		Vehicle.__init__(self,seats)
-
-bi = Bicycle("green", "kawasaki", 2, 2)
-print(bi.__dict__)
+audi.presentation()
+tesla.presentation()
+mercedes.presentation()

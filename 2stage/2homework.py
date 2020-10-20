@@ -1,32 +1,39 @@
-#task1
-class Circle():
-    def __init__(self, r):
-        self.r = r
-
-    def area(self):
-        return self.r ** 2 * 3.14
-
-    def perimeter(self):
-        return 2 * self.r * 3.14
-
-num = input("enter a number")
-num_ = Circle(float(num))
-print(num_.area())
-print(num_.perimeter())
+import random
+# word = "python"
+# dict_1 = {}
+#
+# for i in word:
+# 	dict_1 = random.randint(1,20)
+#
+# print(dict_1)
 
 
+class NewDict:
+	def __init__(self,string_):
+		self.dict_1 = {}
 
-#task2
-class Person:
-  def __init__(self, firstname, lastname, year, grade):
-    self.firstname = firstname
-    self.lastname = lastname
-    self.year = year
-    self.grade = grade
+		for key in string_:
+			self.dict_1[key] = random.randint(1,20)
 
-class Student(Person):
-    def __init__(self, firstname, lastname, year, grade):
-        Person.__init__(self, firstname, lastname, year, grade)
 
-student = Student("John", "adams", "1998", "9")
-print(student.__dict__)
+	def rem_dub(self):
+		d = {}
+
+		for i in self.dict_1:
+			if self.dict_1[i] not in d.values():
+				d[i] = self.dict_1[i]
+
+		self.dict_1[i] = d
+
+
+	def max_3(self):
+
+		list_1 = (self.dict_1.values())
+		list_1.sort(reverse = True)
+
+		return list_1[:3]
+
+
+dict_new = NewDic("python")
+
+print(dict_new.dict_1)
