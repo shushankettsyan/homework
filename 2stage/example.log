@@ -1,0 +1,4 @@
+DEBUG:root:this message should go to the log file
+INFO:root:so should this
+WARNING:root:and this too
+ERROR:root:and non-ASCII stuff too
